@@ -4,8 +4,6 @@ Uma interface web moderna e responsiva para gerar projetos Spring Boot, inspirad
 
 ![Spring Boot Project Generator](static/img/preview.png)
 
-> Nota: Para adicionar uma imagem de preview do seu projeto, salve um screenshot da aplicação como `preview.png` no diretório `static/img/`.
-
 ## 🚀 Funcionalidades
 
 - Interface moderna e responsiva
