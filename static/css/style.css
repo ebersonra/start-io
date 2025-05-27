@@ -206,4 +206,58 @@ select:focus, input:focus {
     border: 1px solid red;
     border-radius: 4px;
     background-color: #fff3f3;
+}
+
+.footer {
+    background-color: white;
+    padding: 2rem 0;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-project-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    color: var(--secondary-color);
+    transition: color 0.2s;
+}
+
+.social-link:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .social-links {
+        margin-top: 1rem;
+    }
 } 
