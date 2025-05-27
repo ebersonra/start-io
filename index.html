@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Generator</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div id="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <header>
+        <div class="logo">Project Generator</div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="form-card">
+                <form id="projectForm">
+                    <div class="form-group">
+                        <label for="project">Project</label>
+                        <select id="project">
+                            <option value="maven">Maven Project</option>
+                            <option value="gradle">Gradle Project</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="language">Language</label>
+                        <select id="language">
+                            <option value="java">Java</option>
+                            <option value="kotlin">Kotlin</option>
+                            <option value="groovy">Groovy</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="version">Version</label>
+                        <select id="version">
+                            <option value="3.5.0">3.5.0</option>
+                            <option value="3.4.3">3.4.3</option>
+                            <option value="3.3.3">3.3.3</option>
+                            <option value="3.3.0">3.3.0</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="group">Group</label>
+                        <input type="text" id="group" placeholder="com.example">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="artifact">Artifact</label>
+                        <input type="text" id="artifact" placeholder="demo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="demo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" id="description" placeholder="Demo project">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="packaging">Packaging</label>
+                        <select id="packaging">
+                            <option value="jar">Jar</option>
+                            <option value="war">War</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="java-version">Java Version</label>
+                        <select id="java-version">
+                            <option value="21">21</option>
+                            <option value="17">17</option>
+                            <option value="11">11</option>
+                            <option value="8">8</option>
+                        </select>
+                    </div>
+
+                    <div class="error-message" id="error-message"></div>
+                    <button type="submit" class="generate-button">Generate</button>
+                </form>
+            </div>
+
+            <div class="dependencies">
+                <div class="search-box">
+                    <input type="text" id="dependency-search" placeholder="Search dependencies" class="search-input">
+                </div>
+                <div class="dependency-list" id="dependency-list">
+                    <div class="dependency-item" data-id="web">
+                        Spring Web
+                        <input type="checkbox" class="checkbox">
+                    </div>
+                    <div class="dependency-item" data-id="data-jpa">
+                        Spring Data JPA
+                        <input type="checkbox" class="checkbox">
+                    </div>
+                    <div class="dependency-item" data-id="security">
+                        Spring Security
+                        <input type="checkbox" class="checkbox">
+                    </div>
+                    <div class="dependency-item" data-id="devtools">
+                        Spring Boot DevTools
+                        <input type="checkbox" class="checkbox">
+                    </div>
+                    <div class="dependency-item" data-id="lombok">
+                        Lombok
+                        <input type="checkbox" class="checkbox">
+                    </div>
+                    <div class="dependency-item" data-id="mysql">
+                        MySQL Driver
+                        <input type="checkbox" class="checkbox">
+                    </div>
+                    <div class="dependency-item" data-id="postgresql">
+                        PostgreSQL Driver
+                        <input type="checkbox" class="checkbox">
+                    </div>
+                    <div class="dependency-item" data-id="mongodb">
+                        MongoDB
+                        <input type="checkbox" class="checkbox">
+                    </div>
+                    <div class="dependency-item" data-id="data-redis">
+                        Redis
+                        <input type="checkbox" class="checkbox">
+                    </div>
+                    <div class="dependency-item" data-id="thymeleaf">
+                        Thymeleaf
+                        <input type="checkbox" class="checkbox">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/config.js"></script>
+    <script src="/static/js/backend.js"></script>
+</body>
+</html>
