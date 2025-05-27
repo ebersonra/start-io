@@ -21,33 +21,42 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    margin-top: 80px;
 }
 
 header {
     background-color: white;
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: bold;
     color: #333;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .logo-img {
-    width: 32px;
-    height: 32px;
+    width: clamp(24px, 4vw, 32px);
+    height: clamp(24px, 4vw, 32px);
     object-fit: contain;
 }
 
 .logo-text {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .main-content {
@@ -59,6 +68,14 @@ header {
 @media (max-width: 768px) {
     .main-content {
         grid-template-columns: 1fr;
+    }
+    
+    .container {
+        margin-top: 70px;
+    }
+    
+    .logo {
+        padding: 0 1rem;
     }
 }
 
