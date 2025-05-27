@@ -85,12 +85,10 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    color: var(--text-color);
     padding: 0 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .logo-img {
@@ -100,9 +98,9 @@ header {
 }
 
 .logo-text {
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: 1.5rem;
     font-weight: bold;
-    white-space: nowrap;
+    color: var(--text-color);
 }
 
 .main-content {
@@ -178,14 +176,21 @@ select:focus, input:focus {
     align-items: center;
     justify-content: space-between;
     color: var(--text-color);
-}
-
-.dependency-item.selected {
-    background-color: #e8f5e9;
+    transition: background-color 0.2s;
 }
 
 .dependency-item:hover {
-    background-color: var(--background-color);
+    background-color: var(--shadow-color);
+}
+
+.dependency-item.selected {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+[data-theme="dark"] .dependency-item.selected {
+    background-color: #2f4f2f;
+    color: var(--text-color);
 }
 
 .checkbox {
