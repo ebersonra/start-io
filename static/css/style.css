@@ -103,6 +103,18 @@ header {
     color: var(--text-color);
 }
 
+.dark-logo {
+    display: none;
+}
+
+[data-theme="dark"] .light-logo {
+    display: none;
+}
+
+[data-theme="dark"] .dark-logo {
+    display: block;
+}
+
 .main-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -306,4 +318,20 @@ select:focus, input:focus {
     .social-links {
         margin-top: 1rem;
     }
+}
+
+.footer-project-name img.light-logo {
+    display: block;
+}
+
+.footer-project-name img.dark-logo {
+    display: none;
+}
+
+[data-theme="dark"] .footer-project-name img.light-logo {
+    display: none;
+}
+
+[data-theme="dark"] .footer-project-name img.dark-logo {
+    display: block;
 } 
