@@ -3,6 +3,19 @@
     --secondary-color: #34302d;
     --background-color: #f1f1f1;
     --border-color: #ddd;
+    --text-color: #333;
+    --card-bg: white;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --primary-color: #8bc34a;
+    --secondary-color: #c9d1d9;
+    --background-color: #0d1117;
+    --border-color: #30363d;
+    --text-color: #f0f6fc;
+    --card-bg: #161b22;
+    --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -15,6 +28,7 @@
 body {
     background-color: var(--background-color);
     line-height: 1.6;
+    color: var(--text-color);
 }
 
 .container {
@@ -24,15 +38,47 @@ body {
     margin-top: 80px;
 }
 
+.theme-toggle {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: var(--text-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+    background-color: var(--shadow-color);
+}
+
+.sun-icon {
+    display: none;
+}
+
+[data-theme="dark"] .sun-icon {
+    display: block;
+}
+
+[data-theme="dark"] .moon-icon {
+    display: none;
+}
+
 header {
-    background-color: white;
+    background-color: var(--card-bg);
     padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px var(--shadow-color);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
@@ -79,11 +125,11 @@ header {
     }
 }
 
-.form-card {
-    background: white;
+.form-card, .dependencies {
+    background: var(--card-bg);
     border-radius: 8px;
     padding: 2rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px var(--shadow-color);
 }
 
 .form-group {
@@ -93,7 +139,7 @@ header {
 label {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--secondary-color);
+    color: var(--text-color);
     font-weight: 500;
 }
 
@@ -103,19 +149,13 @@ select, input {
     border: 1px solid var(--border-color);
     border-radius: 4px;
     font-size: 1rem;
-    background-color: white;
+    background-color: var(--card-bg);
+    color: var(--text-color);
 }
 
 select:focus, input:focus {
     outline: none;
     border-color: var(--primary-color);
-}
-
-.dependencies {
-    background: white;
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .search-box {
@@ -137,6 +177,7 @@ select:focus, input:focus {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: var(--text-color);
 }
 
 .dependency-item.selected {
@@ -209,9 +250,9 @@ select:focus, input:focus {
 }
 
 .footer {
-    background-color: white;
+    background-color: var(--card-bg);
     padding: 2rem 0;
-    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 -2px 4px var(--shadow-color);
     margin-top: 3rem;
 }
 
